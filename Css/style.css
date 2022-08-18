@@ -1,0 +1,1074 @@
+/* <<<<<< Google Fonts Start >>>>>>> */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* <<<<<< Google Fonts End >>>>>>> */
+
+/* <<<<<< Root Start >>>>>>> */
+:root {
+    --great_vibes: 'Great Vibes', cursive;
+    --josefin_sans: 'Josefin Sans', sans-serif;
+    --open_sans: 'Open Sans', sans-serif;
+
+    --pink: #d50a51;
+    --paragraph_color: #444444;
+    --heading_color: #666666;
+    --button_text_color_white: #fffefe;
+}
+
+/* <<<<<< Root End >>>>>>> */
+
+/* <<<<<< All Common Css Start >>>>>>> */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.img {
+    vertical-align: middle;
+}
+
+.img_fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: var(--open_sans);
+    color: var(--paragraph_color);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--josefin_sans);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 32px;
+    color: var(--pink);
+
+}
+
+h3 {
+    font-size: 24px;
+    color: var(--heading_color);
+}
+
+/* <<<<<< All Common Css End >>>>>>> */
+
+/* <<<<<<<<<<< PreLoader >>>>>>>>>> */
+.preloader{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    z-index: 10000;
+}
+/* <<<<<<<<<<< PreLoader >>>>>>>>>> */
+
+
+/* <<<<<< NavigationBar Start >>>>>>> */
+#navbar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+    transition: all linear .3s;
+}
+#navbar.stickymenu{
+    position: fixed;
+    animation-name: sticky;
+    animation-duration:.7s ;
+    animation-timing-function: linear;
+    background: #ffe3f1;
+}
+@keyframes sticky {
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: 0;
+        
+    }
+}
+
+#navbar .navbar_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 27px;
+}
+
+#navbar .logo {
+    max-width: 170px;
+}
+
+#navbar .menu {
+    max-width: 430px;
+}
+
+#navbar .menu ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#navbar .menu ul li {
+    text-align: center;
+
+}
+
+#navbar .menu ul li a {
+    color: #000;
+    font-family: var(--josefin_sans);
+    font-weight: 16px;
+    font-weight: 600;
+    transition: all linear .3s;
+    position: relative;
+
+}
+
+#navbar .menu ul li a::after {
+    content: "";
+    position: absolute;
+    background: url(../images/Nav_hover_image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 0;
+    height: 23px;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all linear .2s;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+#navbar .menu ul li:hover a::after {
+    width: 55px;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+#navbar .menu ul li:hover a {
+    color: var(--pink);
+
+}
+
+#navbar .login_btn a {
+    color: var(--pink);
+    font-family: var(--josefin_sans);
+    font-weight: 20px;
+    font-weight: 600;
+    border: 1px solid var(--pink);
+    padding: 15px 20px;
+    border-radius: 25px;
+    transition: all linear .3s;
+
+}
+
+#navbar .login_btn a i {
+    padding-right: 10px;
+}
+
+#navbar .login_btn a:hover {
+    color: var(--button_text_color_white);
+    background: var(--pink);
+
+}
+
+/* <<<<<< NavigationBar End >>>>>>> */
+
+
+/* <<<<<< Banner Start >>>>>>> */
+#banner {
+    position: relative;
+    background: radial-gradient(circle at center, #fff 5%, #fdecf4 100%);
+}
+
+#banner .banner_main {
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#banner .banner_main .banner_image {
+    width: 595px;
+    transform: scalex(1.09);
+}
+
+#banner .banner_main .banner_info {
+    width: 570px;
+    text-align: center;
+}
+
+.banner_info .banner_info_main .heading h2 {
+    font-family: var(--josefin_sans);
+    font-size: 61px;
+    font-weight: 600;
+    color: #8a5e3b;
+    line-height: 56px;
+    text-transform: uppercase;
+}
+
+.banner_info .banner_info_main .heading h1 {
+    font-family: var(--great_vibes);
+    font-size: 84px;
+    font-weight: 400;
+    color: var(--pink);
+    line-height: 56px;
+}
+
+.banner_info .banner_info_main .para {
+    padding: 60px 0;
+}
+
+.banner_info .banner_info_main .btn a {
+    color: var(--pink);
+    font-family: var(--josefin_sans);
+    font-weight: 20px;
+    font-weight: 600;
+    border: 1px solid var(--pink);
+    padding: 15px;
+    border-radius: 25px;
+    transition: all linear .3s;
+}
+
+.banner_info .banner_info_main .btn a:hover {
+    color: var(--button_text_color_white);
+    background: var(--pink);
+
+}
+
+/* <<<<<< Banner End >>>>>>> */
+
+
+/* <<<<<< History Of Valentine Start >>>>>>> */
+
+#history .history_main {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+
+}
+
+#history .history_main .history_image {
+    width: 560px;
+}
+
+#history .history_main .history_info {
+    width: 590px;
+}
+
+#history .history_main .history_info .heading {
+    position: relative;
+    padding: 30px 0 30px 60px;
+}
+
+#history .history_main .history_info .heading img {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+#history .history_main .history_info .para p {
+    padding-top: 35px;
+}
+
+/* <<<<<< History Of Valentine End >>>>>>> */
+
+
+/* <<<<<< Gift&Proposal Start >>>>>>> */
+#gift {
+    background: #fff9e1;
+}
+
+#gift .gift_main {
+    position: relative;
+    padding: 60px 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+
+#gift .gift_main .gift_info .gift_content {
+    width: 570px;
+    padding-left: 100px;
+}
+
+#gift .gift_main .gift_info .gift_content .heading {
+    padding: 35px 50px;
+    position: relative;
+
+}
+
+#gift .gift_main .gift_info .gift_content .heading img {
+    position: absolute;
+    bottom: 4%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+
+}
+
+#gift .gift_main .gift_info .gift_content .para p {
+    padding-top: 35px;
+}
+
+#gift .gift_main .gift_info .gift_content .buttons {
+    padding-top: 32px;
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+}
+
+#gift .gift_main .gift_info .gift_content .buttons a {
+    color: var(--pink);
+    font-family: var(--josefin_sans);
+    font-weight: 20px;
+    font-weight: 600;
+    border: 1px solid var(--pink);
+    padding: 15px 20px;
+    border-radius: 25px;
+    transition: all linear .3s;
+}
+
+#gift .gift_main .gift_info .gift_content .buttons a:hover {
+    color: var(--button_text_color_white);
+    background: var(--pink);
+}
+
+#gift .gift_main .gift_image {
+    width: 570px;
+}
+
+#gift .gift_main .gift_image {
+    position: absolute;
+    right: 1%;
+    bottom: -9%;
+}
+
+/* <<<<<< Gift&Proposal End >>>>>>> */
+
+
+/* <<<<<< Couple Ticket Start >>>>>>> */
+#ticket .ticket_main {
+    padding: 116px 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 30px;
+    position: relative;
+}
+
+#ticket .ticket_main .ticket_image {
+    position: absolute;
+    top: 50%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+
+}
+
+#ticket .ticket_main .ticket_info .ticket_content {
+    width: 570px;
+    text-align: right;
+}
+
+#ticket .ticket_main .ticket_info .ticket_content .heading {
+    padding: 35px 0;
+    padding-right: 50px;
+    position: relative;
+    text-align: right;
+
+}
+
+#ticket .ticket_main .ticket_info .ticket_content .heading img {
+    position: absolute;
+    bottom: 4%;
+    right: 7%;
+    transform: rotateY(180deg) translate(-50%, -50%);
+
+}
+
+#ticket .ticket_main .ticket_info .ticket_content .para p {
+    padding-top: 35px;
+}
+
+#ticket .ticket_main .ticket_info .ticket_content .buttons {
+    padding-top: 32px;
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+}
+
+#ticket .ticket_main .ticket_info .ticket_content .buttons a {
+    color: var(--pink);
+    font-family: var(--josefin_sans);
+    font-weight: 20px;
+    font-weight: 600;
+    border: 1px solid var(--pink);
+    padding: 15px 20px;
+    border-radius: 25px;
+    transition: all linear .3s;
+}
+
+#ticket .ticket_main .ticket_info .ticket_content .buttons a:hover {
+    color: var(--button_text_color_white);
+    background: var(--pink);
+}
+
+/* <<<<<< Couple Ticket End >>>>>>> */
+
+
+/* <<<<<< Offers & Services Start >>>>>>> */
+#service {
+    background: #fef8fb;
+}
+
+#service .service_main {
+    padding: 55px 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#service .service_main .service_content {
+    width: 370px;
+}
+
+#service .service_main .service_content .heading {
+    padding: 45px 0 0 50px;
+    position: relative;
+
+
+}
+
+#service .service_main .service_content .heading img {
+    position: absolute;
+    top: 50%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+
+}
+
+#service .service_main .service_content .para p {
+    padding-top: 35px;
+}
+
+.service_main .service_item {
+    width: 770px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service_main .service_item .item {
+    width: 370px;
+    padding: 30px;
+    transition: all linear .3s;
+}
+
+.service_main .service_item .item:hover {
+    background: #f1f1f1;
+    border-right: 3px solid var(--pink);
+    box-shadow: 0 0 4px 0 #cccccc;
+}
+
+.service_main .service_item .item .heading span {
+    color: var(--pink);
+    font-family: var(--josefin_sans);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 20px;
+
+}
+
+.service_main .service_item .item .info {
+    padding-top: 20px;
+}
+
+/* <<<<<< Offers & Services End >>>>>>> */
+
+/* <<<<<< Capture & Shoot Start >>>>>>> */
+
+#capture .capture_main {
+    padding: 100px 0;
+    display: flex;
+    gap: 30px;
+    text-align: right;
+}
+
+#capture .capture_main .capture_item {
+    width: 770px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+
+#capture .capture_main .capture_item .item {
+    position: relative;
+    max-width: 370px;
+    cursor: pointer;
+}
+
+
+#capture .capture_main .capture_item .item .opacity {
+    transition: all linear .3s;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+#capture .capture_main .capture_item .item:hover .opacity {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+#capture .capture_main .capture_item .item .opacity .icon {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 16px;
+}
+
+#capture .capture_main .capture_item .item .opacity .icon .icon-1 i {
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+#capture .capture_main .capture_item .item .opacity .icon .icon-1 {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear.3s;
+}
+
+#capture .capture_main .capture_item .item .opacity .icon .icon-1:hover {
+    background: var(--pink);
+    transform: scale(1.2) rotate(360deg);
+    
+    border:none;
+
+}
+
+#capture .capture_main .capture_item .item .opacity .react {
+    height: 80px;
+    text-align: center;
+    padding: 30px 15px 20px;
+}
+
+#capture .capture_main .capture_item .item .opacity .react .heading span {
+    color: #fff;
+    font-family: var(--josefin_sans);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#capture .capture_main .capture_item .item .opacity .react .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#capture .capture_main .capture_item .item .opacity .react .info span {
+    font-family: var(--open_sans);
+    color: #fff;
+    font-size: 13.5px;
+    font-weight: 300;
+}
+
+#capture .capture_main .capture_item .item .opacity .react .info span i {
+    padding-right: 5px;
+}
+
+#capture .capture_main .capture_content {
+    width: 370px;
+}
+
+#capture .capture_main .capture_content .heading {
+    padding: 35px 0;
+    padding-right: 50px;
+    position: relative;
+    text-align: right;
+}
+
+#capture .capture_main .capture_content .heading img {
+    position: absolute;
+    bottom: 4%;
+    right: 11%;
+    transform: rotateY(180deg) translate(-50%, -50%);
+
+}
+
+#capture .capture_main .capture_content .buttons {
+    padding-top: 32px;
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+}
+
+#capture .capture_main .capture_content .buttons a {
+    color: var(--pink);
+    font-family: var(--josefin_sans);
+    font-weight: 20px;
+    font-weight: 600;
+    border: 1px solid var(--pink);
+    padding: 15px 20px;
+    border-radius: 25px;
+    transition: all linear .3s;
+}
+
+#capture .capture_main .capture_content .buttons a:hover {
+    color: var(--button_text_color_white);
+    background: var(--pink);
+}
+
+/* <<<<<< Capture & Shoot End >>>>>>> */
+
+
+/* <<<<<< Counter Start >>>>>>> */
+#counter {
+    background: url(../images/Counter.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: 260px;
+}
+
+#counter .counter_main {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 20px 0;
+}
+
+#counter .counter_main .item {
+    width: 300px;
+    text-align: center;
+}
+
+#counter .counter_main .item .image {
+    padding-bottom: 25px;
+}
+
+#counter .counter_main .item .number span {
+    font-family: var(--josefin_sans);
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--pink);
+}
+
+#counter .counter_main .item .text span {
+    font-family: var(--josefin_sans);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--paragraph_color);
+}
+
+/* <<<<<< Counter End >>>>>>> */
+
+
+/* <<<<<< FeedBack Start >>>>>>> */
+#feedback {}
+
+#feedback .feedback_main {
+    padding: 140px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+#feedback .feedback_main .item {
+    width: 570px;
+    background: #fffae2;
+    padding: 30px;
+    transition: all linear.2s;
+
+}
+
+#feedback .feedback_main .item:hover {
+    box-shadow: 0 0 4px 0 #cccccc;
+    transform: scale(1.02);
+}
+
+.feedback_main .item .details {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.feedback_main .item .details .name h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.feedback_main .item .details .name p {
+    font-size: 18px;
+}
+
+#feedback .feedback_main .f-deco-start {
+    position: absolute;
+    top: 24%;
+    left: -.3%;
+    transform: translate(-50%, -50%);
+}
+
+#feedback .feedback_main .f-deco-end {
+    position: absolute;
+    bottom: 10.5%;
+    right: -6.5%;
+    transform: translate(-50%, -50%);
+}
+
+#feedback .feedback_main .prev_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--pink);
+    border-radius: 50%;
+    transition: all linear .3s;
+}
+
+#feedback .feedback_main .prev_btn:hover {
+    background: var(--pink);
+    color: #fff;
+
+}
+
+#feedback .feedback_main .prev_btn i {
+    text-align: center;
+    font-size: 20px;
+    padding: 8px 12px;
+    color: var(--pink);
+    transition: all linear .3s;
+}
+
+#feedback .feedback_main .prev_btn i:hover {
+    color: #fff;
+}
+
+/* <<<<<< FeedBack End >>>>>>> */
+
+
+/* <<<<<< Footer Start >>>>>>> */
+#footer {
+    background: radial-gradient(circle at center, #fff 5%, #fad3e4 100%);
+    padding: 80px 0;
+    position: relative;
+}
+
+#footer .footer_main {
+    text-align: center;
+}
+
+#footer .footer_main .logo {}
+
+#footer .footer_main .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+
+}
+
+#footer .footer_main .info .item {
+    width: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#footer .footer_main .info .item .icon {
+    width: 50px;
+    height: 50px;
+    background: var(--pink);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+#footer .footer_main .info .item .icon i {
+    color: #fff;
+    font-size: 20px;
+}
+
+#footer .footer_main .info .item .details {
+    width: 225px;
+    text-align: left;
+}
+
+#footer .footer_main .social .heading h4 {
+    font-size: 20px;
+    color: var(--pink);
+}
+
+#footer .footer_main .social .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 20px;
+    gap: 10px;
+}
+
+#footer .footer_main .social .icon .icon-1 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--pink);
+    border-radius: 50%;
+    transition: all linear .3s;
+}
+
+#footer .footer_main .social .icon .icon-1 i {
+    color: var(--pink);
+    font-size: 20px;
+    transition: all linear .3s;
+}
+
+#footer .footer_main .social .icon .icon-1:hover{
+    background: var(--pink);
+    transform: scale(1.12) rotate(360deg);
+    border: none;
+}
+
+#footer .footer_main .social .icon .icon-1:hover i {
+    color: #fff;
+
+}
+
+/* <<<<<< Footer End >>>>>>> */
+
+
+/* <<<<<< Copyright Start >>>>>>> */
+#footer .copyright {
+    padding: 20px 0;
+    background: #fad3e4;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+#footer .copyright p {
+    font-size: 14px;
+}
+
+#footer .copyright p a {
+    font-size: 14px;
+    color: var(--pink);
+}
+
+/* <<<<<< Copyright End >>>>>>> */
+
+
+/* <<<<<< Newsletter Start >>>>>>> */
+#footer .newsletter {
+    background: var(--pink);
+    padding: 20px 100px;
+    border-radius: 55.5px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#footer .newsletter .news_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+#footer .newsletter .news_main .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+}
+
+#footer .newsletter .news_main .heading .logo {
+    font-size: 50px;
+    color: #fff;
+    padding-right: 10px;
+}
+
+#footer .newsletter .news_main .heading .text h2 {
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#footer .newsletter .news_main .heading .text h4 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#footer .newsletter .news_main .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#footer .newsletter .news_main .form input {
+    width: 270px;
+    height: 35px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-family: var(--open_sans);
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+#footer .newsletter .news_main .form .email-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .newsletter .news_main .form button {
+    border: 1px solid #fff;
+    width: 40px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+#footer .newsletter .news_main .form button i {
+    font-size: 18px;
+    color: #fff;
+}
+
+::placeholder {
+    color: #fff;
+    padding: 10px;
+    font-family: var(--open_sans);
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* <<<<<< Newsletter End >>>>>>> */
+
+
+/* <<<<<< Top And Bottom Start >>>>>>> */
+
+.top{
+    width: 40px;
+    height: 40px;
+    background:var(--pink);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .3s;
+} 
+.top a{
+    color: #fff;
+    font-size: 20px;
+    
+}
+.top_btn_show{
+    opacity: 1;
+    visibility: visible;    
+    bottom: 25px;
+}
+
+/* <<<<<< Top And Bottom End >>>>>>> */
+
+
+/* <<<<<< Goole Fonts Start >>>>>>> */
+/* <<<<<< Goole Fonts End >>>>>>> */
